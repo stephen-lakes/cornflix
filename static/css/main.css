@@ -68,6 +68,7 @@ header form {
     color:red;
     font-size: 30px;
     padding: 0.5rem;
+    width: fit-content;
 }
 .search {
     background-color: transparent;
@@ -116,8 +117,10 @@ main article {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem 1rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.5px;  
+    gap: 0.5rem;  
 }
+
 
 .movie-info span {
     background-color: var(--primary-color);
@@ -153,4 +156,9 @@ main article {
 
 .movie:hover .overview {
     transform: translateY(0%);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 3rem 1rem;
 }
