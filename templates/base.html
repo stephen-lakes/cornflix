@@ -17,13 +17,16 @@
     
 </head>
 <body>
-
-    <header>
-        <a class="navbar-brand" href="{% url 'home' %}" style="color: red; font-size:40px;">Cornflix</a>
-        <form action="">
-            <input type="text" placeholder="search" class="search">
-        </form>
-    </header>
+    <div class="header-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <a href="{% url 'home' %}" class="brand">Cornflix</a>
+            
+            <form action="">
+                <input type="text" placeholder="search" class="search">
+            </form>
+        </header>
+    </div>
 
     <main>
 
