@@ -11,7 +11,13 @@
                     <img src={{ img_base_url }}{{ movie.poster_path }} alt="Image">
                     <div class="movie-info">
                         <h3>{{ movie.title }}</h3>
-                        <span class="green">{{ movie.vote_average }}</span>
+                        {% if movie.vote_average > 7.8 %}
+                            <span class="green">{{ movie.vote_average }}</span>
+                        {% elif movie.vote_average > 5 %}
+                            <span class="orange">{{ movie.vote_average }}</span>
+                        {% else %}
+                            <span class="red">{{ movie.vote_average }}</span>
+                        {% endif %}
                     </div>
                     <div class="overview">
                         <h3>Overview</h3>
