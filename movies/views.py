@@ -9,9 +9,14 @@ from decouple import config
 
 
 def index(request):
-    resp = requests.get(config('BASE_URL') + '/discover/movie?sort_by=popularity.desc&api_key=' + config('API_KEY'))
-    context = {"movies": resp.json()["results"],
-    "img_base_url": config('IMG_BASE_URL')
+    BASE_URL = config('BASE_URL')
+    API_KEY = config('API_KEY')
+    IMG_BASE_URL = config('IMG_BASE_URL')
+
+    resp = requests.get(BASE_URL + '/discover/movie?sort_by=popularity.desc&api_key=' + API_KEY)
+    context = {
+        "movies": resp.json()["results"],
+        "img_base_url": IMG_BASE_URL
     }
     
     return render(request, 'home.html', context=context)    
