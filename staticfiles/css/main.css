@@ -50,7 +50,7 @@ img {
 }
 body {
     background-color: var(--primary-color);
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 }
 
 header {
