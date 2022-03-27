@@ -3,6 +3,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 }
 
 ul li  {
