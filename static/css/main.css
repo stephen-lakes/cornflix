@@ -3,7 +3,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 ul li  {
