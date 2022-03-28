@@ -103,6 +103,9 @@ main article {
     gap: 1rem;
 }
 
+.article-wrapper {
+    min-height: 300px;
+}
 
 .movie {
     border-radius: 3px;
