@@ -1,7 +1,4 @@
-from audioop import reverse
 from django.shortcuts import render
-from django.http import HttpResponse
-
 
 import requests
 import json
@@ -29,12 +26,10 @@ def index(request):
         context = {
             "search_results": resp.json()["results"],
             "img_base_url": IMG_BASE_URL,
+            "search_results_length": len(resp.json()["results"]),
         }
             
-            # redirect to a new URL:
-            #return HttpResponseRedirect(reverse('home'))
-        return render(request, 'home.html', context=context)
-
+            
     # if a GET (or any other method) we'll create a blank form
     else:
         form = SearchForm()
@@ -46,7 +41,7 @@ def index(request):
             "form": form
         }
         
-        return render(request, 'home.html', context=context)    
+    return render(request, 'home.html', context=context)    
 
 
 
