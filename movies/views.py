@@ -34,9 +34,11 @@ def index(request):
     else:
         form = SearchForm()
 
-        resp = requests.get(BASE_URL + '/discover/movie?sort_by=popularity.desc&api_key=' + API_KEY)
+        discover = requests.get(BASE_URL + '/discover/movie?sort_by=popularity.desc&api_key=' + API_KEY).json()["results"]
+        upcoming = requests.get(BASE_URL + '/movie/upcoming?api_key=' + API_KEY + '&language=en-US&page=1').json()["results"]
         context = {
-            "discover": resp.json()["results"],
+            "discover": discover,
+            "upcoming": upcoming,
             "img_base_url": IMG_BASE_URL,
             "form": form
         }
