@@ -22,10 +22,9 @@
         <header class="header">
             <a href="{% url 'home' %}" class="brand">Cornflix</a>
             
-            <form action="{% url 'home' %}" method="post">
+            <form action="" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <!--<input type="text" placeholder="search" class="search">-->
             </form>
         </header>
     </div>
@@ -46,7 +45,7 @@
 
     <footer>
         <!-- footer -->
-        <p style="text-align: center; color: #fff;">Created by Stephen Oluyomi. 2022</p>
+        <p style="text-align: center; color: #fff;">Created by Stephen Oluyomi @2022</p>
 
     </footer>
     <script src="{% static 'js/main.js' %}"></script>    
