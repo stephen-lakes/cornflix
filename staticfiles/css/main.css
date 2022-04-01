@@ -68,13 +68,14 @@ header form {
 .brand {
     color:red;
     font-size: 30px;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     width: fit-content;
 }
 .search {
     background-color: transparent;
     border: 1px solid var(--primary-color);
     padding: 0.5rem 1rem;
+    margin-right: 1rem;
     border-radius: 50px;
     width: 100%;
     font-size: 1.5rem;
@@ -105,6 +106,15 @@ main article {
 
 .article-wrapper {
     
+}
+
+.heading-wrapper {
+    padding-left: 2em;
+}
+
+.heading-wrapper h2 {
+    text-align: left;
+    padding-top: 1rem;
 }
 
 .movie {
