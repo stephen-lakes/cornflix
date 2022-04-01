@@ -3,8 +3,8 @@
 {% block search %}
 <div class="article-wrapper">
     {% if search_results %}
-        <div id="popular-movies">
-            <h1 class="heading">Search results</h1>
+        <div class="heading-wrapper">
+            <h2 class="heading">Search results</h2>
         </div>
     {% elif search_results_length == 0 %}
         <p style="text-align: center;color: #fff;">Oops!! Movie not found, check to see your spellings are right</p>
@@ -36,14 +36,14 @@
     </article>
 </div>
 
-{% endblock %}
+{% endblock search %}
 
 {% block content %}
     
     <div class="article-wrapper">
         {% if discover %}
             <div class="heading-wrapper">
-                <h1 class="heading">Popular Movies</h1>
+                <h2 class="heading">Popular movies</h2>
             </div>
         {% endif %}
         <article>
@@ -67,12 +67,14 @@
                 </div>
             {% endfor %}
         </article>
+    </div>
 
-    <!-- UPCOMING   -->
+
+    <!-- IN THEATERS   -->
     <div class="article-wrapper">
         {% if upcoming %}
             <div class="heading-wrapper">
-                <h1 class="heading">upcoming Movies in Theater</h1>
+                <h2 class="heading">In Theaters</h2>
             </div>
         {% endif %}
         <article>
@@ -98,12 +100,36 @@
         </article>
     </div>
 
-    
-        
-        
-        
-        
+
+    <!-- TOP RATED   -->
+    <div class="article-wrapper">
+        {% if toprated %}
+            <div class="heading-wrapper">
+                <h2 class="heading">Top Rated</h2>
+            </div>
+        {% endif %}
+        <article>
+            {% for movie in toprated %}
+                <div class="movie">
+                    <img src={{ img_base_url }}{{ movie.poster_path }} alt="Image">
+                    <div class="movie-info">
+                        <h3>{{ movie.title }}</h3>
+                        {% if movie.vote_average > 6.9 %}
+                            <span class="green">{{ movie.vote_average }}</span>
+                        {% elif movie.vote_average > 5 %}
+                            <span class="orange">{{ movie.vote_average }}</span>
+                        {% else %}
+                            <span class="red">{{ movie.vote_average }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="overview">
+                        <h3>Overview</h3>
+                        {{ movie.overview }}
+                    </div>
+                </div>
+            {% endfor %}
+        </article>
     </div>
-         
+     
 
 {% endblock %}
