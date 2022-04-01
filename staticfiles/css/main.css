@@ -155,7 +155,6 @@ main article {
     color: red;
 }
 
-
 .overview {
     position: absolute;
     left: 0;
@@ -192,7 +191,7 @@ main article {
 
     .search {
         font-size: 1rem;
-    }
+    }    
     
 }
 
