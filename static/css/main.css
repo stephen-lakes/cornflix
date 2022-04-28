@@ -66,10 +66,15 @@ header form {
     width: 100%;
 }
 .brand {
-    color:red;
+    color:orange;
     font-size: 30px;
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     width: fit-content;
+}
+
+.brand::before {
+    content: "Corn";
+    color:rgb(226, 43, 128);
 }
 .search {
     background-color: transparent;
