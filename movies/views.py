@@ -24,6 +24,7 @@ def index(request):
 
         resp = requests.get(BASE_URL + '/search/movie?api_key=' + API_KEY + '&language=en-US&query=' + search_term + '&page=1&include_adult=false')
         context = {
+            "search_term": search_term,
             "search_results": resp.json()["results"],
             "img_base_url": IMG_BASE_URL,
             "search_results_length": len(resp.json()["results"]),
