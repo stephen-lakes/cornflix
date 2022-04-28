@@ -4,7 +4,7 @@
 <div class="article-wrapper">
     {% if search_results %}
         <div class="heading-wrapper">
-            <h2 class="heading">Search results</h2>
+            <h2 class="heading">Search results for {{ search_term }}</h2>
         </div>
     {% elif search_results_length == 0 %}
         <p style="text-align: center;color: #fff;">Oops!! Movie not found, check to see your spellings are right</p>
