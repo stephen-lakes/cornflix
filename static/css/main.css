@@ -72,10 +72,11 @@ header form {
     width: fit-content;
 }
 
+/**
 .brand::before {
     content: "Corn";
     color:rgb(226, 43, 128);
-}
+}**/
 .search {
     background-color: transparent;
     border: 1px solid var(--primary-color);
