@@ -72,7 +72,6 @@ https://api.themoviedb.org/3/movie/latest?api_key=c59e25e2fa584e942f512871beda2f
 Search movies
 https://api.themoviedb.org/3/search/movie?api_key=c59e25e2fa584e942f512871beda2fae&language=en-US&query=the%20simpsons&page=1&include_adult=false
 
-
 Search movies by Keyword
 https://api.themoviedb.org/3/search/keyword?api_key=c59e25e2fa584e942f512871beda2fae&query=dance&page=1
 
