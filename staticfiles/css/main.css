@@ -42,6 +42,7 @@ html {
 img {
     max-width: 100%;
     height: 200;
+    border-radius: 8px; /* new*/
 }
 
 /* VARIABLES */
@@ -173,6 +174,19 @@ main article {
     transform: translateY(0%);
 }
 
+footer {
+    background-color: var(--secondary-color);
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p a {
+    color: white;
+}
+
+
 /* Tablets styles */
 @media screen and (min-width:768px){
     header { 
@@ -197,8 +211,3 @@ main article {
     
 }
 
-
-footer {
-    background-color: var(--secondary-color);
-    padding: 3rem 1rem;
-}
