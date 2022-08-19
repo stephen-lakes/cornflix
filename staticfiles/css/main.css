@@ -107,10 +107,6 @@ main article {
     gap: 1rem;
 }
 
-.article-wrapper {
-    
-}
-
 .heading-wrapper {
     padding-left: 2em;
 }
@@ -126,6 +122,7 @@ main article {
     background-color: var(--secondary-color);
     position: relative;
     overflow: hidden;
+    width: 200px;
 }
 
 .movie-info {

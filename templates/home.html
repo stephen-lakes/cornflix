@@ -49,7 +49,9 @@
         <article>
             {% for movie in discover %}
                 <div class="movie">
-                    <img src={{ img_base_url }}{{ movie.poster_path }} alt="Image">
+                    <div class="img-wrapper">
+                        <img src={{ img_base_url }}{{ movie.poster_path }} alt="Image">
+                    </div>
                     <div class="movie-info">
                         <h3>{{ movie.title }}</h3>
                         {% if movie.vote_average > 6.9 %}
